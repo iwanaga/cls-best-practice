@@ -1,0 +1,51 @@
+<!doctype html>
+<head>
+  <style>
+    body { margin: 0 }
+    .fixedWrap {
+        padding-top: 40px;
+        position: relative; /* for child element to work as link */
+        background-color: #82B1FF;
+    }
+    .dynamicWrap {
+        padding-top: calc(1/8 * 100%); /* height/width * 100% */
+        position: relative; /* for child element to work as link */
+        background-color: #448AFF;
+    }
+    .dynamicWrapNew {
+        aspect-ratio: 8/2; /* width/height */
+        width: 100%;
+        position: relative; /* for child element to work as link */
+        background-color: #2979FF;
+    }
+    .link {
+        position: absolute; /* allocate link area */
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="fixedWrap">
+    <a class="link" href="#1">fixed height by padding-top hack</a>
+  </div>
+  <div class="dynamicWrap">
+    <a class="link" href="#2">dynamic height by padding-top hack</a>
+  </div>
+  <div class="dynamicWrapNew">
+    <a class="link" href="#3">dynamic height by new css property</a>
+  </div>
+
+  <div style="margin: 25px; color: #333">
+    <h1>Improving Culumative Layout Shift Score</h1>
+    <div><strong>See CSS by DevTool.</strong></div>
+    <br>
+    <div>Element height is allocated <b>before loading image file</b> according to the width of the browser window, <b>keeping aspect raio</b>.</div>
+    <ul>
+      <li>Use <b>padding-top</b> for now</li>
+      <li>CSS <b>aspect-ratio</b> property is supported by only a few browsers. Not recommended.</li>
+    </ul>
+  </div>
+</body>
