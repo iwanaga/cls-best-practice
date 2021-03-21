@@ -1,11 +1,12 @@
 # cls-best-practice
 Example html and css to minimize Cumulative Layout Shift.
 
-## Example 1
+## Allocating height before loading image
+### e.g. 1
 Fixed height. By padding-top hack.
 
-## Example 2
+### e.g. 2
 Dynamic height, keeping aspect ratio. By padding-top hack.
 
-## Example 3
+### e.g. 3
 Dynamic height, keeping aspect ratio. By CSS aspect-ratio property.
